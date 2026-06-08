@@ -1,16 +1,93 @@
-# React + Vite
+# ShoppingApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small shopping demo built with React, Vite and Redux Toolkit. The app fetches products from the Fake Store API, lets users add/remove items to a cart, and view a cart summary.
 
-Currently, two official plugins are available:
+**Live preview:** Run locally with `npm run dev` and open the URL shown by Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Highlights:** lightweight, responsive UI, global state with Redux Toolkit, toast notifications, and Tailwind CSS.
 
-## React Compiler
+**Project Status:** Prototype / demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Table of Contents**
+- Features
+- Installation
+- Usage
+- Project structure
+- Technologies
+- Contributing
 
-## Expanding the ESLint configuration
+**Features**
+- Product listing fetched from https://fakestoreapi.com
+- Add / Remove items from cart (global state)
+- Cart summary with total price and item count
+- Toast notifications for add/remove actions
+- Responsive grid and simple checkout UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Installation**
+
+1. Clone the repository:
+
+```
+git clone <repo-url>
+cd ShoppingApp
+```
+
+2. Install dependencies:
+
+```
+npm install
+```
+
+3. Run the development server:
+
+```
+npm run dev
+```
+
+4. Open the app in your browser at the address shown by Vite (usually `http://localhost:5173`).
+
+**Usage**
+- Visit the Home page to browse products.
+- Click `Add to Cart` to add an item; click `Remove Item` to remove it.
+- Open the Cart page (top-right cart icon) to view items, remove items, and see the total amount.
+
+**Project structure**
+
+- **src/**: Application source
+	- [src/main.jsx](src/main.jsx): App bootstrap (React, Router, Redux Provider)
+	- [src/App.jsx](src/App.jsx): Routes and top-level layout
+	- [src/pages/Home.jsx](src/pages/Home.jsx): Product listing & data fetch
+	- [src/pages/Cart.jsx](src/pages/Cart.jsx): Cart view and summary
+	- [src/components/Product.jsx](src/components/Product.jsx): Product card with add/remove actions
+	- [src/components/CartItems.jsx](src/components/CartItems.jsx): Cart item row
+	- [src/components/Navbar.jsx](src/components/Navbar.jsx): Navigation and cart count
+	- [src/redux/store.jsx](src/redux/store.jsx): Redux store configuration
+	- [src/redux/slices/CartSlice.jsx](src/redux/slices/CartSlice.jsx): Cart slice (add, remove)
+
+See the code for details and UI classes.
+
+**Technologies**
+- React 19
+- Vite
+- Redux Toolkit
+- React Router DOM
+- Tailwind CSS
+- react-hot-toast
+- react-icons
+
+**Scripts** (see `package.json`)
+- `npm run dev` — Start dev server
+- `npm run build` — Build production assets
+- `npm run preview` — Preview production build
+- `npm run lint` — Run ESLint
+
+**Contributing**
+- This project is a small demo. Feel free to open issues or submit PRs for improvements.
+
+**Notes & Next steps**
+- The checkout button is a placeholder — integrate a payment flow or backend to persist orders.
+- Consider adding tests, TypeScript, and improved error handling for production readiness.
+
+---
+
+If you'd like, I can also add a short CONTRIBUTING.md or example env configuration next.
