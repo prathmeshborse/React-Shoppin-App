@@ -84,10 +84,4 @@ See the code for details and UI classes.
 **Contributing**
 - This project is a small demo. Feel free to open issues or submit PRs for improvements.
 
-**Notes & Next steps**
-- The checkout button is a placeholder — integrate a payment flow or backend to persist orders.
-- Consider adding tests, TypeScript, and improved error handling for production readiness.
-
 ---
-
-If you'd like, I can also add a short CONTRIBUTING.md or example env configuration next.
